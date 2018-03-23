@@ -16,3 +16,21 @@ HttpSession集成是如何工作的，自定义一个类来扩展HttpServletRequ
 session的方法，然后在上面的那个过滤器中使用自定义类替换servlet容器自己实现的实现了接口
 HttpServletRequest的那个类。后续再获取到的session就是spring session自己实现的
 HttpSession了。
+
+HttpSession和RESTful APIs，这种情况下session可以放到header里，可以设置session策略为
+HeaderHttpSessionStrategy策略，来替换session放到cookie里这种策略，具体参考官方文档
+该章节
+
+HttpSessionListener，支持监听session的创建和销毁事件，具体配置参考官方文档该章节
+
+
+
+
+
+
+
+
+
+
+
+
