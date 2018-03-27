@@ -13,7 +13,7 @@ public class SessionInitializer extends AbstractHttpSessionApplicationInitialize
 	public SessionInitializer() {
 		//调用父类构造函数会导致rootAppContext的初始化
 		//且把SessionConfig注册进去，主要是为了
-		//应用@EnableRedisHttpSession注解
+		//应用@EnableRedisHttpSession注解（负责向root容器中注册必要的bean）
 		//如果rootAppContext已由其它类初始化（如MVC初始化）
 		//则该处无需调用父类构造函数
 		//但是SessionConfig还是要注册
