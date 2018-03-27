@@ -19,6 +19,7 @@ public class SessionInitializer extends AbstractHttpSessionApplicationInitialize
 		//但是SessionConfig还是要注册
 		//@EnableRedisHttpSession注解还是要应用
 		//所以SessionConfig应该注册在MVC初始化的类里
+		//的rootAppContext中而不是servletAppContext中
 		super(SessionConfig.class);
 	}
 }
